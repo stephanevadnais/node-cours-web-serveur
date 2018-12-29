@@ -2,6 +2,7 @@ const express = require('express');
 var app = express();
 var hbs = require('hbs');
 var fs = require('fs');
+const port = process.env.PORT || 3000;
 
 
 hbs.registerPartials(__dirname + '/views/partie');
@@ -97,5 +98,6 @@ app.get('/', (requete,reponse)=>{
 
 
 
-
-app.listen(3000,console.log('Connection établie sur le port 3000'));
+app.listen(port,()=>{
+    console.log(`Connection établie sur le port ${port}`)
+});
