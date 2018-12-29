@@ -69,7 +69,7 @@ app.get('/projet',(requete,reponse)=>{
 );
 
 app.get('/direct',(requete,reponse)=>{
-        reponse.render('projet.hbs',)
+        reponse.render('direct.hbs',)
     }
 );
 
