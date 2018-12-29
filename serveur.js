@@ -68,6 +68,11 @@ app.get('/projet',(requete,reponse)=>{
     }
 );
 
+app.get('/direct',(requete,reponse)=>{
+        reponse.render('projet.hbs',)
+    }
+);
+
 app.get('/reference',(requete,reponse)=> {
 
     reponse.render('reference',{
