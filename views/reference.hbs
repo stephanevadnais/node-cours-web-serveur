@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page à propos Express</title>
+</head>
+<body>
+{{> entete}}
+<p>Bienvenue page Views</p>
+{{#list collaborateur}}{{majusculeTXT prenom}} {{majusculeTXT nom}} {{age}} {{/list}}
+
+{{> pied_de_page}}
+</body>
+</html>
+
+

@@ -1,0 +1,26 @@
+{
+  "name": "webserveurgrunt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "grunt": "^1.0.3",
+    "hbs": "^4.0.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-imagemin": "^3.1.0",
+    "grunt-contrib-jshint": "^2.0.0",
+    "grunt-contrib-uglify": "^4.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-text-replace": "^0.4.0",
+    "load-grunt-tasks": "^4.0.0"
+  }
+}
