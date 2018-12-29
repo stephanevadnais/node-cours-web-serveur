@@ -63,6 +63,11 @@ hbs.registerHelper('majusculeTXT',(txt)=>{
     return txt.toUpperCase();
 });
 
+app.get('/projet',(requete,reponse)=>{
+    reponse.render('projet.hbs',)
+    }
+);
+
 app.get('/reference',(requete,reponse)=> {
 
     reponse.render('reference',{
