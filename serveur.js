@@ -2,7 +2,7 @@ const express = require('express');
 var app = express();
 var hbs = require('hbs');
 var fs = require('fs');
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 
 hbs.registerPartials(__dirname + '/views/partie');
@@ -32,8 +32,6 @@ app.use((requete, reponse, next)=>{
 });
 
 
-
-
 app.use(express.static(__dirname + '/publique'));
 
 hbs.registerHelper('journee', ()=>{
@@ -59,8 +57,24 @@ hbs.registerHelper('list', function(collaborateur, caractéristiques) {
 
     return out + "</ul>";
 });
+
+
 hbs.registerHelper('majusculeTXT',(txt)=>{
     return txt.toUpperCase();
+});
+
+app.get('/utilisateur',(requete,reponse)=>{
+    reponse.send({
+
+        date: new Date().toLocaleDateString(),
+        auteur: 'Stéphane Vadnais',
+        collaborateur: [
+            {prenom: "Yehuda", nom: "Katz", age:"age:" +22},
+            {prenom: "Carl", nom: "Lerche", age: "age:" +54},
+            {prenom: "Alan", nom: "Johnson", age:"age:" + 33}
+        ]
+
+    });
 });
 
 app.get('/projet',(requete,reponse)=>{
@@ -74,6 +88,7 @@ app.get('/direct',(requete,reponse)=>{
 );
 
 app.get('/reference',(requete,reponse)=> {
+
 
     reponse.render('reference',{
 
@@ -111,3 +126,5 @@ app.get('/', (requete,reponse)=>{
 app.listen(port,()=>{
     console.log(`Connection établie sur le port ${port}`)
 });
+
+module.exports.app  = app;
