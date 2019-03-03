@@ -12,10 +12,13 @@
   "license": "ISC",
   "dependencies": {
     "assert": "^1.4.1",
+    "dateformat": "^3.0.3",
     "express": "^4.16.4",
     "grunt": "^1.0.3",
     "hbs": "^4.0.1",
-    "mongodb": "^2.2.5"
+    "mongodb": "^2.2.5",
+    "mongoose": "^5.4.12",
+    "mongoose-type-email": "^1.0.10"
   },
   "devDependencies": {
     "expect": "^1.20.2",

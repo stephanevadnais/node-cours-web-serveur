@@ -1,3 +1,6 @@
+
+
+
 const express = require('express');
 var app = express();
 var hbs = require('hbs');
@@ -11,6 +14,12 @@ app.set('view engine', 'hbs');
 //     reponse.render('maintenance.hbs');
 //
 // });
+
+
+
+
+
+
 
 app.use((requete, reponse, next)=>{
     var demande = ()=>{
