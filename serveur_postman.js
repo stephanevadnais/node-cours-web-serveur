@@ -34,10 +34,18 @@ app.post('/tache',(requete,reponse)=>{
 });
 
 
+app.get('/tache',(requete,reponse)=>{
+    Tache.find().then((taches)=>{
+        reponse.send({taches})
+    }, (erreur)=>{
+        reponse.status(400).send(erreur)
+    });
+
+});
+
 app.post('/utilisateur',(requete,reponse)=>{
 
 
-    var date = new Date_Enregistrement();
 
     var utilisateur = new Utilisateur({
         Enregistrement: requete.body.Enregistrement
@@ -53,6 +61,78 @@ app.post('/utilisateur',(requete,reponse)=>{
     });
 });
 
-app.listen(3002,()=>{
+app.get('/utilisateur',(requete,reponse)=>{
+    Utilisateur.find().then((utilisateurs)=>{
+        reponse.send({utilisateurs})
+    }, (erreur)=>{
+        reponse.status(400).send(erreur)
+    });
+
+});
+
+
+app.post('/utilisateur',(requete,reponse)=>{
+
+
+
+    var utilisateur = new Utilisateur({
+        Enregistrement: requete.body.Enregistrement
+
+    });
+
+    utilisateur.save().then((document)=>{
+        reponse.send(document)
+
+    },(erreur)=>{
+
+        reponse.status(400).send(erreur);
+    });
+});
+
+app.get('/utilisateur',(requete,reponse)=>{
+    Utilisateur.find().then((utilisateurs)=>{
+        reponse.send({utilisateurs})
+    }, (erreur)=>{
+        reponse.status(400).send(erreur)
+    });
+
+});app.get('/utilisateur',(requete,reponse)=>{
+    Utilisateur.find().then((utilisateurs)=>{
+        reponse.send({utilisateurs})
+    }, (erreur)=>{
+        reponse.status(400).send(erreur)
+    });
+
+});app.post('/utilisateur',(requete,reponse)=>{
+
+
+
+    var utilisateur = new Utilisateur({
+        Enregistrement: requete.body.Enregistrement
+
+    });
+
+    utilisateur.save().then((document)=>{
+        reponse.send(document)
+
+    },(erreur)=>{
+
+        reponse.status(400).send(erreur);
+    });
+});
+
+app.get('/utilisateur',(requete,reponse)=>{
+    Utilisateur.find().then((utilisateurs)=>{
+        reponse.send({utilisateurs})
+    }, (erreur)=>{
+        reponse.status(400).send(erreur)
+    });
+
+});
+
+
+app.listen(3004,()=>{
     console.log('Connection Etablie')
 });
+
+module.exports = {app}

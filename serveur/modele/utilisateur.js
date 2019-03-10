@@ -5,7 +5,7 @@ var formatageDate = require('dateformat');
 var moment = new Date();
 formatageDate.masks.perso = 'dd/mm/yyyy, h"h"MM TT  "Enregistrement Accomplis!"';
 var Date_Enregistrement = formatageDate(moment, "perso");
-console.log(Date_Enregistrement);
+
 
 var TemplateUtilisateur = new mongoose.Schema(
     {
@@ -16,7 +16,7 @@ var TemplateUtilisateur = new mongoose.Schema(
                 travail: mongoose.SchemaTypes.Email,
                 maison: mongoose.SchemaTypes.Email
             },
-            Date: mongoose.SchemaTypes.String
+            date: { type: Date, default: Date.now }
 
         }
 

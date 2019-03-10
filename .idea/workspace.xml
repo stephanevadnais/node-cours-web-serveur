@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06ed3cd5-f5a8-4d39-9c9b-9eae5821b9e0" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/mongodbExemple/mongodb-enlever.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serveur/db/mongooseConfigurationConnection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serveur/modele/mongooseShemaCourrielExemple.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serveur/modele/tache_planification.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serveur/modele/utilisateur.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serveur_postman.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playground/mongodb-connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/mongodbExemple/mongodb-insertion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playground/mongodb-enlever.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playground/mongodb-trouver.js" beforeDir="false" afterPath="$PROJECT_DIR$/mongodbExemple/mongodb-trouver.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serveur.js" beforeDir="false" afterPath="$PROJECT_DIR$/serveur.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serveur/modele/mongooseShemaCourrielExemple.js" beforeDir="false" afterPath="$PROJECT_DIR$/serveur/modele/mongooseShemaCourrielExemple.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serveur/modele/utilisateur.js" beforeDir="false" afterPath="$PROJECT_DIR$/serveur/modele/utilisateur.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serveur/serveur.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/serveur/serveur.test_perso.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serveur_postman.js" beforeDir="false" afterPath="$PROJECT_DIR$/serveur_postman.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,47 +25,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="utilisateur.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/serveur/modele/utilisateur.js">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="578">
+              <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tache_planification.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/serveur/modele/tache_planification.js">
+      <file leaf-file-name="serveur_postman.test_perso.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/serveur/serveur_postman.test_perso.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="serveur_postman.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/serveur_postman.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mongooseShemaCourrielExemple.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/serveur/modele/mongooseShemaCourrielExemple.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" column="32" selection-start-line="35" selection-end-line="35" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mongooseConfigurationConnection.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/serveur/db/mongooseConfigurationConnection.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="2" selection-end-column="35" />
+            <state relative-caret-position="391">
+              <caret line="50" column="20" lean-forward="true" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -93,9 +60,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/easing/easing.js" />
-        <option value="$PROJECT_DIR$/node_modules/concat-map/example/map.js" />
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/js/easing/CustomBounce.js" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/views/propos.hbs.html" />
@@ -118,7 +82,6 @@
         <option value="$PROJECT_DIR$/views/reference.hbs" />
         <option value="$PROJECT_DIR$/serveur/serveur.js" />
         <option value="$PROJECT_DIR$/utils/utils.js" />
-        <option value="$PROJECT_DIR$/serveur/serveur.test.js" />
         <option value="$PROJECT_DIR$/utils/utils.test.js" />
         <option value="$PROJECT_DIR$/spies/appplication.js" />
         <option value="$PROJECT_DIR$/spies/application.test.js" />
@@ -129,7 +92,6 @@
         <option value="$PROJECT_DIR$/spies/app.test.js" />
         <option value="$PROJECT_DIR$/hbs_command.js" />
         <option value="$PROJECT_DIR$/playground/mongoDB-connection_verification.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/playground/mongodb-connection.js" />
         <option value="$PROJECT_DIR$/playground/mongodb-trouver.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -142,8 +104,13 @@
         <option value="$PROJECT_DIR$/serveur_1.js" />
         <option value="$PROJECT_DIR$/serveur/modele/tache_planification.js" />
         <option value="$PROJECT_DIR$/serveur/modele/mongooseShemaCourrielExemple.js" />
+        <option value="$PROJECT_DIR$/serveur/serveur.test.js" />
         <option value="$PROJECT_DIR$/serveur_postman.js" />
+        <option value="$PROJECT_DIR$/serveur/serveur_postman.test.js" />
         <option value="$PROJECT_DIR$/serveur/modele/utilisateur.js" />
+        <option value="$PROJECT_DIR$/serveur/serveur_postman.tests_.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/serveur/serveur_postman.test_perso.js" />
       </list>
     </option>
   </component>
@@ -165,8 +132,8 @@
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="32" />
+    <option name="x" value="900" />
+    <option name="y" value="68" />
     <option name="width" value="1936" />
     <option name="height" value="1053" />
   </component>
@@ -189,18 +156,6 @@
               <item name="WebServeurGrunt" type="462c0819:PsiDirectoryNode" />
               <item name="serveur" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="WebServeurGrunt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebServeurGrunt" type="462c0819:PsiDirectoryNode" />
-              <item name="serveur" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebServeurGrunt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebServeurGrunt" type="462c0819:PsiDirectoryNode" />
-              <item name="serveur" type="462c0819:PsiDirectoryNode" />
-              <item name="modele" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -210,11 +165,12 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WebServeur_Clone" />
     <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/node_modules/mocha" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -242,31 +198,49 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="mongodb-enlever.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/mongodbExemple/mongodb-enlever.js" working-dir="$PROJECT_DIR$/mongodbExemple" />
-    <configuration name="mongodb-insertion.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/mongodbExemple/mongodb-insertion.js" working-dir="$PROJECT_DIR$/mongodbExemple" />
+  <component name="RunManager" selected="Mocha.serveur\serveur_postman.tests_.js">
     <configuration name="mongooseShemaCourrielExemple.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/serveur/modele/mongooseShemaCourrielExemple.js" working-dir="$PROJECT_DIR$/serveur" />
     <configuration name="serveur.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/serveur.js" working-dir="$PROJECT_DIR$" />
     <configuration name="serveur_postman.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/serveur_postman.js" working-dir="$PROJECT_DIR$" />
+    <configuration name="serveur\serveur_postman.test.js" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST_FILE</test-kind>
+      <test-file>$PROJECT_DIR$/serveur/serveur_postman.test.js</test-file>
+    </configuration>
+    <configuration name="serveur\serveur_postman.tests_.js" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST_FILE</test-kind>
+      <test-file>$PROJECT_DIR$/serveur/serveur_postman.tests_.js</test-file>
+    </configuration>
     <list>
       <item itemvalue="Node.js.serveur.js" />
-      <item itemvalue="Node.js.mongodb-insertion.js" />
-      <item itemvalue="Node.js.mongodb-enlever.js" />
       <item itemvalue="Node.js.mongooseShemaCourrielExemple.js" />
       <item itemvalue="Node.js.serveur_postman.js" />
+      <item itemvalue="Mocha.serveur\serveur_postman.test.js" />
+      <item itemvalue="Mocha.serveur\serveur_postman.tests_.js" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Mocha.serveur\serveur_postman.tests_.js" />
+        <item itemvalue="Mocha.serveur\serveur_postman.test.js" />
         <item itemvalue="Node.js.serveur_postman.js" />
         <item itemvalue="Node.js.serveur.js" />
         <item itemvalue="Node.js.mongooseShemaCourrielExemple.js" />
-        <item itemvalue="Node.js.mongodb-insertion.js" />
-        <item itemvalue="Node.js.mongodb-enlever.js" />
       </list>
     </recent_temporary>
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\Vladsteak\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -290,20 +264,45 @@
       <workItem from="1549642227173" duration="21747000" />
       <workItem from="1550255148371" duration="21175000" />
       <workItem from="1551458500112" duration="3007000" />
-      <workItem from="1551623706319" duration="11364000" />
+      <workItem from="1551623706319" duration="25903000" />
+      <workItem from="1552149409534" duration="10590000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="utils_utils_test_js - 2019.01.05 at 14h 36m 13s.xml">
-      <configuration name="utils\utils.test.js" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="serveur_serveur_postman_test_js - 2019.03.09 at 11h 42m 14s.xml">
+      <configuration name="serveur\serveur_postman.test.js" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="utils_utils_test_js - 2019.01.05 at 14h 36m 18s.xml">
-      <configuration name="utils\utils.test.js" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="serveur_serveur_postman_test_js - 2019.03.09 at 11h 44m 49s.xml">
+      <configuration name="serveur\serveur_postman.test.js" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="serveur_serveur_postman_test_js - 2019.03.09 at 11h 47m 18s.xml">
+      <configuration name="serveur\serveur_postman.test.js" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="serveur_serveur_postman_test_js - 2019.03.09 at 11h 48m 19s.xml">
+      <configuration name="serveur\serveur_postman.test.js" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="serveur_serveur_postman_tests__js - 2019.03.09 at 14h 36m 25s.xml">
+      <configuration name="serveur\serveur_postman.tests_.js" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="serveur_serveur_postman_tests__js - 2019.03.09 at 14h 37m 15s.xml">
+      <configuration name="serveur\serveur_postman.tests_.js" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="serveur_serveur_postman_tests__js - 2019.03.09 at 14h 37m 33s.xml">
+      <configuration name="serveur\serveur_postman.tests_.js" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="serveur_serveur_postman_tests__js - 2019.03.09 at 14h 38m 19s.xml">
+      <configuration name="serveur\serveur_postman.tests_.js" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="serveur_serveur_postman_tests__js - 2019.03.09 at 14h 42m 54s.xml">
+      <configuration name="serveur\serveur_postman.tests_.js" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="serveur_serveur_postman_tests__js - 2019.03.09 at 14h 43m 19s.xml">
+      <configuration name="serveur\serveur_postman.tests_.js" configurationId="mocha-javascript-test-runner" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169302000" />
+    <option name="totallyTimeSpent" value="194431000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -323,9 +322,9 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32963374" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43174252" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43174252" />
       <window_info id="Structure" order="1" sideWeight="0.50165564" side_tool="true" weight="0.24973656" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.50499445" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.20421754" />
       <window_info id="Favorites" order="2" sideWeight="0.50165564" side_tool="true" weight="0.24973656" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39955604" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -340,19 +339,19 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49834436" visible="true" weight="0.24973656" />
       <window_info id="Structure" order="1" sideWeight="0.50165564" side_tool="true" weight="0.24973656" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32963374" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32963374" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.39955604" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32963374" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39955604" />
       <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.50499445" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32963374" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32963374" />
       <window_info id="Favorites" order="2" sideWeight="0.50165564" side_tool="true" weight="0.24973656" />
     </layout-to-restore>
   </component>
@@ -394,14 +393,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/easing/CustomEase.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/easing/EasePack.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/easing/easing_min.js" />
-    <entry file="file://$PROJECT_DIR$/output.css" />
     <entry file="file://$PROJECT_DIR$/css/output.css" />
     <entry file="file://$PROJECT_DIR$/css/style_1.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -566,13 +557,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/playground/mongoDB-connection_verification.js" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/direct.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -594,13 +578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/serveur/serveur.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret column="51" selection-start-column="51" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mongodbExemple/mongodb-enlever.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -615,45 +592,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/serveur/db/mongooseConfigurationConnection.js">
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-end-column="35" />
+        <state relative-caret-position="-79444">
+          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/serveur.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="1" selection-start-line="3" selection-end-line="3" selection-end-column="35" />
+        <state relative-caret-position="238">
+          <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/serveur/modele/mongooseShemaCourrielExemple.js">
+    <entry file="file://$PROJECT_DIR$/serveur/db/mongooseConfigurationConnection.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="32" selection-start-line="35" selection-end-line="35" selection-end-column="39" />
+        <state relative-caret-position="34">
+          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/serveur/modele/tache_planification.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        <state relative-caret-position="238">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/serveur_postman.js">
+    <entry file="file://$PROJECT_DIR$/serveur/modele/mongooseShemaCourrielExemple.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
+        <state relative-caret-position="272">
+          <caret line="16" column="48" lean-forward="true" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serveur/serveur.test_perso.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mocha/bin/_mocha">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="479" column="17" selection-start-line="479" selection-start-column="17" selection-end-line="479" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mocha/lib/mocha.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="513" column="9" selection-start-line="513" selection-start-column="9" selection-end-line="513" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/serveur/modele/utilisateur.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="17">
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serveur_postman.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2329">
+          <caret line="137" column="19" selection-start-line="137" selection-start-column="19" selection-end-line="137" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serveur/serveur_postman.test_perso.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="50" column="20" lean-forward="true" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
         </state>
       </provider>
     </entry>

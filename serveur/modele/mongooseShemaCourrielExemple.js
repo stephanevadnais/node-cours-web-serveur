@@ -1,5 +1,5 @@
 var {mongoose} = require('../db/mongooseConfigurationConnection');
-
+require('mongoose-type-email');
 var formatageDate = require('dateformat');
 var moment = new Date();
 formatageDate.masks.perso = 'dd/mm/yyyy, h"h"MM TT  "Enregistrement Accomplis!"';
@@ -7,7 +7,7 @@ var Date_Enregistrement = formatageDate(moment, "perso");
 console.log(Date_Enregistrement);
 
 
-require('mongoose-type-email');
+
 
 
 var TemplateUtilisateur = new mongoose.Schema(

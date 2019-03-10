@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha **/*.test.js",
+    "test": "mocha **/*.test_perso.js",
     "start": "node serveur.js",
     "test-watch": "nodemon --exec \"npm test\""
   },
@@ -15,10 +15,10 @@
     "dateformat": "^3.0.3",
     "express": "^4.16.4",
     "grunt": "^1.0.3",
-    "hbs": "^4.0.1",
+    "hbs": "^4.0.3",
+    "mockingoose": "^2.12.0",
     "mongodb": "^2.2.5",
-    "mongoose": "^5.4.12",
-    "mongoose-type-email": "^1.0.10"
+    "mongoose": "^5.4.12"
   },
   "devDependencies": {
     "expect": "^1.20.2",
@@ -30,8 +30,10 @@
     "grunt-contrib-watch": "^1.1.0",
     "grunt-text-replace": "^0.4.0",
     "load-grunt-tasks": "^4.0.0",
-    "mocha": "^5.2.0",
+    "mocha": "^3.5.3",
+    "mongoose-type-email": "^1.0.10",
+    "nodemon": "^1.18.10",
     "rewire": "^4.0.1",
-    "supertest": "^3.4.1"
+    "supertest": "^2.0.0"
   }
 }
