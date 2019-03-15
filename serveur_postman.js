@@ -1,17 +1,16 @@
+const {ObjectID} = require('mongodb')
 const express = require('express');
 var app = express();
 var {mongoose} = require('./serveur/db/mongooseConfigurationConnection');
 var {Tache}= require('./serveur/modele/tache_planification');
 var {Utilisateur} = require('./serveur/modele/utilisateur');
 var {Date_Enregistrement} = require('./serveur/modele/utilisateur');
-
 var bodyparser = require('body-parser');
 
 
 
 
 app.use(bodyparser.json());
-
 
 app.post('/tache',(requete,reponse)=>{
 
@@ -32,6 +31,49 @@ app.post('/tache',(requete,reponse)=>{
         reponse.status(400).send(erreur);
     });
 });
+
+
+
+
+// app.get('/tache/:id',(requete,reponse)=>{
+//     var id = requete.params.id;
+//
+//
+//     if(ObjectID.isValid(id)){
+//         Tache.findById(id).then((taches)=>{
+//             reponse.send({taches})
+//         }).catch((e)=>{
+//             reponse.status(400).send();
+//         });
+//     }
+//     else {
+//         return reponse.status(404).send();
+//     }
+//
+//
+//
+// });
+
+
+app.get('/tache/:mongoID',(requete,reponse)=> {
+    var mongoID = requete.params.mongoID;
+
+    if (!ObjectID.isValid(mongoID)) {
+        return reponse.status(404).send();
+    }
+    Tache.findById(mongoID).then((taches)=>{
+        if(!taches){
+            return reponse.status(404).send();
+        }
+        reponse.send({taches});
+
+    }
+
+    ).catch((erreur)=>{
+        reponse.status(400).send();
+    })
+});
+
 
 
 app.get('/tache',(requete,reponse)=>{
@@ -129,6 +171,8 @@ app.get('/utilisateur',(requete,reponse)=>{
     });
 
 });
+
+
 
 
 app.listen(3004,()=>{
