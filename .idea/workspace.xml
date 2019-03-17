@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06ed3cd5-f5a8-4d39-9c9b-9eae5821b9e0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="06ed3cd5-f5a8-4d39-9c9b-9eae5821b9e0" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -22,7 +20,7 @@
       <file leaf-file-name="serveur_postman.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/serveur_postman.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
+            <state relative-caret-position="3026">
               <caret line="178" column="13" selection-start-line="178" selection-start-column="13" selection-end-line="178" selection-end-column="13" />
             </state>
           </provider>
@@ -31,8 +29,17 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-205">
-              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+            <state relative-caret-position="136">
+              <caret line="8" column="47" lean-forward="true" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mongooseConfigurationConnection.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/serveur/db/mongooseConfigurationConnection.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="28" lean-forward="true" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -40,17 +47,8 @@
       <file leaf-file-name="mongoose_requete.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/serveur/Requete_Mongoose/mongoose_requete.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
+            <state relative-caret-position="-17">
               <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tache_planification.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/serveur/modele/tache_planification.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -118,11 +116,11 @@
         <option value="$PROJECT_DIR$/serveur/serveur_postman.tests_.js" />
         <option value="$PROJECT_DIR$/serveur/modele/mongooseShemaCourrielExemple.js" />
         <option value="$PROJECT_DIR$/serveur/modele/test.js" />
-        <option value="$PROJECT_DIR$/serveur/db/mongooseConfigurationConnection.js" />
         <option value="$PROJECT_DIR$/serveur/Requete_Mongoose/mongoose_requete.js" />
         <option value="$PROJECT_DIR$/serveur/serveur_postman.test_perso.js" />
         <option value="$PROJECT_DIR$/serveur_postman.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/serveur/db/mongooseConfigurationConnection.js" />
       </list>
     </option>
   </component>
@@ -143,7 +141,7 @@
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="900" />
     <option name="y" value="68" />
     <option name="width" value="1936" />
@@ -162,6 +160,17 @@
             <path>
               <item name="WebServeurGrunt" type="b2602c69:ProjectViewProjectNode" />
               <item name="WebServeurGrunt" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebServeurGrunt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebServeurGrunt" type="462c0819:PsiDirectoryNode" />
+              <item name="serveur" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebServeurGrunt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebServeurGrunt" type="462c0819:PsiDirectoryNode" />
+              <item name="serveur" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -282,7 +291,7 @@
       <workItem from="1551458500112" duration="3007000" />
       <workItem from="1551623706319" duration="25903000" />
       <workItem from="1552149409534" duration="34624000" />
-      <workItem from="1552744865384" duration="5330000" />
+      <workItem from="1552744865384" duration="8108000" />
     </task>
     <servers />
   </component>
@@ -319,7 +328,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="223795000" />
+    <option name="totallyTimeSpent" value="226573000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -340,7 +349,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32963374" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.41842398" />
       <window_info id="Structure" order="1" sideWeight="0.50165564" side_tool="true" weight="0.24973656" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.45394006" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.61598223" />
       <window_info id="Favorites" order="2" sideWeight="0.50165564" side_tool="true" weight="0.24973656" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39955604" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -638,24 +647,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/serveur/modele/test.js" />
-    <entry file="file://$PROJECT_DIR$/serveur/db/mongooseConfigurationConnection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="28" lean-forward="true" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/serveur/modele/utilisateur.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/serveur/Requete_Mongoose/mongoose_requete.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -673,6 +668,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/serveur_postman.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3026">
+          <caret line="178" column="13" selection-start-line="178" selection-start-column="13" selection-end-line="178" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/serveur/modele/tache_planification.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -680,17 +682,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/serveur_postman.js">
+    <entry file="file://$PROJECT_DIR$/serveur/Requete_Mongoose/mongoose_requete.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="178" column="13" selection-start-line="178" selection-start-column="13" selection-end-line="178" selection-end-column="13" />
+        <state relative-caret-position="-17">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serveur/db/mongooseConfigurationConnection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="28" lean-forward="true" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-205">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        <state relative-caret-position="136">
+          <caret line="8" column="47" lean-forward="true" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
         </state>
       </provider>
     </entry>
