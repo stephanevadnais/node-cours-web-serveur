@@ -1,6 +1,3 @@
-
-
-
 const express = require('express');
 var app = express();
 var hbs = require('hbs');
