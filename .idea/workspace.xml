@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06ed3cd5-f5a8-4d39-9c9b-9eae5821b9e0" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serveur/modele/utilisateur.js" beforeDir="false" afterPath="$PROJECT_DIR$/serveur/modele/utilisateur.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serveur_postman.js" beforeDir="false" afterPath="$PROJECT_DIR$/serveur_postman.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="serveur_postman.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="serveur_postman.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/serveur_postman.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="152" column="22" lean-forward="true" selection-start-line="152" selection-start-column="22" selection-end-line="152" selection-end-column="22" />
+            <state relative-caret-position="289">
+              <caret line="142" column="14" selection-start-line="142" selection-start-column="14" selection-end-line="142" selection-end-column="14" />
               <folding>
                 <element signature="e#525#561#0" />
                 <element signature="e#655#1116#0" />
@@ -35,12 +37,18 @@
                 <element signature="e#2188#2233#0" />
                 <element signature="e#2030#2365#0" />
                 <element signature="e#2489#2534#0" />
-                <element signature="e#3136#3519#0" />
                 <element signature="e#3558#3695#0" />
                 <element signature="e#472#719#0" />
-                <element signature="e#1746#1997#0" />
-                <element signature="e#3421#3462#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utilisateur.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/serveur/modele/utilisateur.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -139,7 +147,6 @@
         <option value="$PROJECT_DIR$/serveur/modele/tache_planification.js" />
         <option value="$PROJECT_DIR$/serveur/serveur.test.js" />
         <option value="$PROJECT_DIR$/serveur/serveur_postman.test.js" />
-        <option value="$PROJECT_DIR$/serveur/modele/utilisateur.js" />
         <option value="$PROJECT_DIR$/serveur/serveur_postman.tests_.js" />
         <option value="$PROJECT_DIR$/serveur/modele/mongooseShemaCourrielExemple.js" />
         <option value="$PROJECT_DIR$/serveur/modele/test.js" />
@@ -149,6 +156,7 @@
         <option value="$PROJECT_DIR$/serveur/db/mongooseConfigurationConnection.js" />
         <option value="$PROJECT_DIR$/serveur.js" />
         <option value="$PROJECT_DIR$/serveur_postman.js" />
+        <option value="$PROJECT_DIR$/serveur/modele/utilisateur.js" />
       </list>
     </option>
   </component>
@@ -331,7 +339,7 @@
       <workItem from="1551458500112" duration="3007000" />
       <workItem from="1551623706319" duration="25903000" />
       <workItem from="1552149409534" duration="34624000" />
-      <workItem from="1552744865384" duration="12739000" />
+      <workItem from="1552744865384" duration="18333000" />
     </task>
     <servers />
   </component>
@@ -368,7 +376,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="231204000" />
+    <option name="totallyTimeSpent" value="236798000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -388,9 +396,9 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32963374" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.42175362" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42175362" />
       <window_info id="Structure" order="1" sideWeight="0.50165564" side_tool="true" weight="0.24973656" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.25416204" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3218646" />
       <window_info id="Favorites" order="2" sideWeight="0.50165564" side_tool="true" weight="0.24973656" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39955604" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -681,13 +689,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/serveur/modele/test.js" />
-    <entry file="file://$PROJECT_DIR$/serveur/modele/utilisateur.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/supertest/lib/test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
@@ -739,8 +740,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/serveur_postman.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="152" column="22" lean-forward="true" selection-start-line="152" selection-start-column="22" selection-end-line="152" selection-end-column="22" />
+        <state relative-caret-position="289">
+          <caret line="142" column="14" selection-start-line="142" selection-start-column="14" selection-end-line="142" selection-end-column="14" />
           <folding>
             <element signature="e#525#561#0" />
             <element signature="e#655#1116#0" />
@@ -752,12 +753,16 @@
             <element signature="e#2188#2233#0" />
             <element signature="e#2030#2365#0" />
             <element signature="e#2489#2534#0" />
-            <element signature="e#3136#3519#0" />
             <element signature="e#3558#3695#0" />
             <element signature="e#472#719#0" />
-            <element signature="e#1746#1997#0" />
-            <element signature="e#3421#3462#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serveur/modele/utilisateur.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
         </state>
       </provider>
     </entry>

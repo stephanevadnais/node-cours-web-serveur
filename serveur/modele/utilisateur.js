@@ -16,7 +16,7 @@ var TemplateUtilisateur = new mongoose.Schema(
                 travail: mongoose.SchemaTypes.Email,
                 maison: mongoose.SchemaTypes.Email
             },
-            date: { type: Date, default: Date.now }
+            date: { type: String, default: Date_Enregistrement }
 
         }
 
