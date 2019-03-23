@@ -1,7 +1,7 @@
 const {ObjectID} = require('mongodb')
 const express = require('express');
 var app = express();
-const port = process.env.PORT || 3004;
+const port = process.env.PORT || 3001;
 var {mongoose} = require('./serveur/db/mongooseConfigurationConnection');
 var {Tache}= require('./serveur/modele/tache_planification');
 var {Utilisateur} = require('./serveur/modele/utilisateur');
@@ -9,6 +9,9 @@ var {Date_Enregistrement} = require('./serveur/modele/utilisateur');
 var bodyparser = require('body-parser');
 var hbs = require('hbs');
 var fs = require('fs');
+var _ = require('lodash');
+
+
 
 // app.use((requete,reponse,next)=>{
 //     reponse.render('maintenance.hbs');
@@ -116,6 +119,50 @@ app.get('/tache',(requete,reponse)=>{
     });
 
 }); //Obtenir toutes les taches
+
+app.delete('/tache/:mongoID',(requete,reponse)=> {
+    var mongoID = requete.params.mongoID;
+
+    if (!ObjectID.isValid(mongoID)) {
+        return reponse.status(404).send();
+    }
+    Tache.findByIdAndDelete(mongoID).then((taches)=>{
+            if(!taches){
+                return reponse.status(404).send();
+            }
+            reponse.send({tache});
+
+        }
+
+    ).catch((erreur)=>{
+        reponse.status(400).send();
+    })
+}); // Obtenir les taches en envoyant un ID MongoDB
+
+
+app.patch('/tache/:id',(requete,reponse)=>{
+    var id = requete.params.id;
+    var body = _.pick(requete.body,['texte','complet']);
+
+    if (!ObjectID.isValid(id)) {
+        return reponse.status(404).send();
+    }
+    if(_.isBoolean(body.complet) && body.complet){
+        body.dateComplete = new Date().getTime();
+    }
+    else{
+        body.complet = false;
+        body.dateComplete = null;
+    }
+    Tache.findByIdAndUpdate(id, {$set: body}, {new: true}).then((taches)=>{
+        if(!taches){
+            return reponse.status(404).send()
+        }
+        reponse.send({taches})
+    }).catch((erreur)=>{
+        reponse.status(400).send();
+    })
+})
 
 app.post('/tache',(requete,reponse)=>{
 

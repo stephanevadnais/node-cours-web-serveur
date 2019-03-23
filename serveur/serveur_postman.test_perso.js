@@ -9,26 +9,24 @@ const {ObjectID} = require('mongodb');
 
 var expect = require('expect');
 
-const Taches =[{
-    _id: new ObjectID,
-    texte: 'Premiere Tache'
-}, {
-    _id: new ObjectID,
-    texte: 'Deuxieme Tache'
-}];
-
-
 beforeEach((fait)=>{
 
     Tache.deleteMany({}).then(()=> {
         return Tache.insertMany(Taches);
-
 
     }).then(()=> {
         fait();
     })
 });
 
+
+const Taches =[{
+    _id: new ObjectID,
+    texte: 'Premiere Tache'
+},{
+    _id: new ObjectID,
+    texte: 'Deuxieme Tache'
+}];
 
 
 
@@ -38,6 +36,10 @@ beforeEach((fait)=>{
 
 
 describe ('Verification POST et GET ', ()=>{
+
+
+
+
     it('Requete avec POST /tache',(fait)=>{
 
         var texte = 'Essaie Libre';
@@ -63,6 +65,7 @@ describe ('Verification POST et GET ', ()=>{
             });
 
     });
+
     it ('Requete avec POST /tache Sans envoyer Objet JSON',(fait)=>{
 
         verificationSuperTestRequest(app)
@@ -92,7 +95,6 @@ describe ('Verification POST et GET ', ()=>{
             }).end(fait)
     });
 
-
     it('Requete avec GET /tache Avec ObjetID MongoDB en passe en parametre',(fait)=>{
 
         verificationSuperTestRequest(app)
@@ -103,7 +105,7 @@ describe ('Verification POST et GET ', ()=>{
             })
             .end(fait);
 
-    })
+    });
 
     it ('L ID est valide mais aucune tache trouve 404',(fait)=>{
         var mongoIDtoHexString = new ObjectID().toHexString()
@@ -112,11 +114,7 @@ describe ('Verification POST et GET ', ()=>{
             .expect(404)
             .end(fait)
 
-
-
-
-    })
-
+    });
 
     it('L ID n est pas valide', (fait)=>{
         verificationSuperTestRequest(app)
@@ -124,13 +122,57 @@ describe ('Verification POST et GET ', ()=>{
             .expect(404)
                 .end(fait)
 
-    })
-
-
-
-
+    });
 
 });
+
+describe('Protocole DELETE',()=>{
+
+
+    it ('DELETE /tache avec lD passe en argument', (fait)=>{
+
+        const ID_Tache = Taches[0]._id.toHexString();
+
+        verificationSuperTestRequest(app)
+            .del(`/tache/${ID_Tache}`)
+            .expect(400)
+            .expect((reponse)=>{
+                expect(repondse.body.tached._id).toBe(ID_Tache);
+            })
+            .end((erreur,reponse)=>{
+                if(erreur){
+                    return fait(erreur);
+                }
+
+                Tache.findById(ID_Tache).then((taches)=>{
+                    expect(taches).toExist();
+                    fait();
+                }).catch((erreur)=>{
+                    return fait(erreur);
+                })
+            });
+    });
+     it('Retourne 404 tache n a pas ete trouve',(fait)=>{
+         var mongoIDtoHexString = new ObjectID().toHexString()
+         verificationSuperTestRequest(app)
+             .del(`/tache/${mongoIDtoHexString}`)
+             .expect(404)
+             .end(fait)
+
+     });
+
+     it('Retourne 404 ObjetID n est pas valide ',(fait)=>{
+         verificationSuperTestRequest(app)
+             .del('/tache/invalidID')
+             .expect(404)
+             .end(fait)
+
+        })
+
+}
+
+
+)
 
 
 

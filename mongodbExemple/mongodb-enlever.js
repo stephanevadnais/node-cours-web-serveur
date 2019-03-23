@@ -22,14 +22,14 @@ MongoClient.connect('mongodb://localhost:27017/enregistrement',{useNewUrlParser:
     //     console.log(resultat);
     // });
 
-    // db.collection('Utilisateurs').findOneAndUpdate({
-    //     _id: new ObjectID('5c5713b7ceab8c3280622ae4')
-    // },{
-    //     $set: {
-    //         enregistrement:true
-    //     }
-    // },{returnOriginal:false}
-    // )
+    db.collection('Utilisateurs').findOneAndUpdate({
+        _id: new ObjectID('5c5713b7ceab8c3280622ae4')
+    },{
+        $set: {
+            enregistrement:true
+        }
+    },{returnOriginal:false}
+    )
 
     // db.collection('Utilisateurs').findOneAndUpdate({
     //         _id: new ObjectID('5c5713b7ceab8c3280622ae4')
