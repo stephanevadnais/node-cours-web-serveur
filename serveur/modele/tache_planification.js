@@ -12,7 +12,7 @@ var Tache = mongoose.model('tache', {
         default:false
     },
     dateComplete: {
-        type:String,
+        type:Number,
         default: null
     }
 });

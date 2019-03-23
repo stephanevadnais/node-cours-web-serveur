@@ -22,22 +22,16 @@ beforeEach((fait)=>{
 
 const Taches =[{
     _id: new ObjectID,
-    texte: 'Premiere Tache'
+    texte: 'Premiere Tache',
+    complet: true,
+    dateComplete:123
 },{
     _id: new ObjectID,
     texte: 'Deuxieme Tache'
 }];
 
 
-
-
-
-
-
-
 describe ('Verification POST et GET ', ()=>{
-
-
 
 
     it('Requete avec POST /tache',(fait)=>{
@@ -126,53 +120,95 @@ describe ('Verification POST et GET ', ()=>{
 
 });
 
-describe('Protocole DELETE',()=>{
+// describe('Protocole DELETE',()=>{
+//
+//
+//     it ('DELETE /tache avec lD passe en argument', (fait)=>{
+//
+//         const ID_Tache = Taches[0]._id.toHexString();
+//
+//         verificationSuperTestRequest(app)
+//             .del(`/tache/${ID_Tache}`)
+//             .expect(400)
+//             .expect((reponse)=>{
+//                 expect(reponse.body.taches._id).toBe(ID_Tache);
+//             })
+//             .end((erreur,reponse)=>{
+//                 if(erreur){
+//                     return fait(erreur);
+//                 }
+//
+//                 Tache.findById(ID_Tache).then((taches)=>{
+//                     expect(taches).toExist();
+//                     fait();
+//                 }).catch((erreur)=>{
+//                     return fait(erreur);
+//                 })
+//             });
+//     });
+//      it('Retourne 404 tache n a pas ete trouve',(fait)=>{
+//          var mongoIDtoHexString = new ObjectID().toHexString()
+//          verificationSuperTestRequest(app)
+//              .del(`/tache/${mongoIDtoHexString}`)
+//              .expect(404)
+//              .end(fait)
+//
+//      });
+//
+//      it('Retourne 404 ObjetID n est pas valide ',(fait)=>{
+//          verificationSuperTestRequest(app)
+//              .del('/tache/invalidID')
+//              .expect(404)
+//              .end(fait)
+//
+//         });
+//
+// });
+
+describe('PATCH /tache avec lD passe en argument',()=> {
 
 
-    it ('DELETE /tache avec lD passe en argument', (fait)=>{
-
-        const ID_Tache = Taches[0]._id.toHexString();
-
+    it('Mise a jour tache', (fait) => {
+        var ID_Tache = Taches[0]._id.toHexString();
+        var texte = "Envoyer de mocha test"
         verificationSuperTestRequest(app)
-            .del(`/tache/${ID_Tache}`)
-            .expect(400)
-            .expect((reponse)=>{
-                expect(repondse.body.tached._id).toBe(ID_Tache);
+            .patch(`/tache/${ID_Tache}`)
+            .send({
+                complet: true,
+                texte: texte
+
             })
-            .end((erreur,reponse)=>{
-                if(erreur){
-                    return fait(erreur);
-                }
+            .expect(200)
+            .expect((resultat) => {
 
-                Tache.findById(ID_Tache).then((taches)=>{
-                    expect(taches).toExist();
-                    fait();
-                }).catch((erreur)=>{
-                    return fait(erreur);
-                })
-            });
+                expect(resultat.body.taches.texte).toBe(texte);
+                expect(resultat.body.taches.complet).toBe(true);
+                expect(resultat.body.taches.dateComplete).toBeA('number');
+            }).end(fait)
+
     });
-     it('Retourne 404 tache n a pas ete trouve',(fait)=>{
-         var mongoIDtoHexString = new ObjectID().toHexString()
-         verificationSuperTestRequest(app)
-             .del(`/tache/${mongoIDtoHexString}`)
-             .expect(404)
-             .end(fait)
-
-     });
-
-     it('Retourne 404 ObjetID n est pas valide ',(fait)=>{
-         verificationSuperTestRequest(app)
-             .del('/tache/invalidID')
-             .expect(404)
-             .end(fait)
-
-        })
-
-}
 
 
-)
+    it('La tache n est pas complete',(fait)=>{
+        var ID_Tache = Taches[0]._id.toHexString();
+        var texte = "Envoyer de mocha test"
+        verificationSuperTestRequest(app)
+            .patch(`/tache/${ID_Tache}`)
+            .send({
+                complet:false,
+                texte: texte
+
+            })
+            .expect(200)
+            .expect((resultat)=>{
+
+                expect(resultat.body.taches.texte).toBe(texte);
+                expect(resultat.body.taches.complet).toBe(false);
+                expect(resultat.body.taches.dateComplete).toNotExist();
+            }).end(fait)
+    });
+});
+
 
 
 
