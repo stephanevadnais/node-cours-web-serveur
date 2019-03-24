@@ -1,3 +1,4 @@
+require('./configuration/config');
 const verificationSuperTestRequest = require('supertest');
 const {app} = require ('../serveur_postman');
 const {Tache} = require('./modele/tache_planification');
