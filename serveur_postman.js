@@ -1,4 +1,4 @@
-
+require('./serveur/configuration/config');
 const {ObjectID} = require('mongodb');
 const express = require('express');
 
@@ -13,6 +13,8 @@ var bodyparser = require('body-parser');
 var hbs = require('hbs');
 var fs = require('fs');
 var _ = require('lodash');
+var {authentification} = require('./serveur/middleware_utilitaireMillieu/authentification');
+
 
 
 
@@ -185,17 +187,48 @@ app.post('/tache',(requete,reponse)=>{
 }); // envoyer  de nouvelles taches
 app.post('/utilisateur',(requete,reponse)=>{
 
-    var utilisateur = new Utilisateur({
-        Enregistrement: requete.body.Enregistrement,
+    var body = _.pick(requete.body, ['courriel', 'password']);
+    var utilisateur = new Utilisateur(body);
 
-    });
+    utilisateur.save().then(()=>{
+          return utilisateur.generateAuthToken_genererAuthJeton();
 
-    utilisateur.save().then((document)=>{
-        reponse.send(document)
-    },(erreur)=>{
+        }).then((token)=>{
+        reponse.header('x-auth',token).send(utilisateur);
+
+    }).catch((erreur)=>{
         reponse.status(400).send(erreur);
-    });
+    })
+
 }); // Enregistrer de  nouvel utilisateur
+
+
+var authentification = (requete,reponse,suivant)=>{
+
+    var token = requete.header('x-auth');
+
+    Utilisateur.findByToken_trouverLeJeton(token).then((utilisateur)=>{
+        if(!utilisateur){
+            return new Promise.reject();
+        }
+
+        requete.utilisateur = utilisateur;
+        requete.token = token;
+        suivant();
+
+    }).catch((erreur)=>{
+
+        reponse.status(401).send();
+    });
+
+}
+
+
+app.get('/utilisateur/moi',authentification,(requete,reponse)=>{
+
+reponse.send(requete.utilisateur);
+
+});
 
 app.listen(port,()=>{
     console.log(`Ecoute sur le port ${port}`)
