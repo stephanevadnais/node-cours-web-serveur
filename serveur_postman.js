@@ -185,9 +185,11 @@ app.post('/tache',(requete,reponse)=>{
         reponse.status(400).send(erreur);
     });
 }); // envoyer  de nouvelles taches
+
+
 app.post('/utilisateur',(requete,reponse)=>{
 
-    var body = _.pick(requete.body, ['courriel', 'password']);
+    var body = _.pick(requete.body, ['nom','prenom','surnom','courriel', 'password']);
     var utilisateur = new Utilisateur(body);
 
     utilisateur.save().then(()=>{
@@ -198,36 +200,32 @@ app.post('/utilisateur',(requete,reponse)=>{
 
     }).catch((erreur)=>{
         reponse.status(400).send(erreur);
-    })
+    });
 
 }); // Enregistrer de  nouvel utilisateur
 
 
-var authentification = (requete,reponse,suivant)=>{
 
-    var token = requete.header('x-auth');
-
-    Utilisateur.findByToken_trouverLeJeton(token).then((utilisateur)=>{
-        if(!utilisateur){
-            return new Promise.reject();
-        }
-
-        requete.utilisateur = utilisateur;
-        requete.token = token;
-        suivant();
-
-    }).catch((erreur)=>{
-
-        reponse.status(401).send();
-    });
-
-}
 
 
 app.get('/utilisateur/moi',authentification,(requete,reponse)=>{
 
 reponse.send(requete.utilisateur);
 
+});
+
+
+app.post('/utilisateur/entrer',(requete,reponse)=>{
+    var body = _.pick(requete.body,['surnom','password']);
+
+    Utilisateur.findByCredentials_trouverParAccreditation(body.surnom,body.password).then((utilisateur)=>{
+        var token = utilisateur.generateAuthToken_genererAuthJeton();
+        reponse.header('x-auth',token).send(utilisateur);
+
+    }).catch((erreur)=>{
+        reponse.status(401).send();
+
+    });
 });
 
 app.listen(port,()=>{
