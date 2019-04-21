@@ -10,7 +10,7 @@ var authentification = (requete,reponse,suivant)=>{
             return new Promise.reject();
         }
 
-        requete.utilisateur = utilisateur;
+        requete.utilisateurAuthentifier = utilisateur;
         requete.token = token;
         suivant();
 

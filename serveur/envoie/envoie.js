@@ -7,6 +7,7 @@ const utilisateurUnId = new ObjectID;
 const utilisateurDeuxId = new ObjectID;
 
 const Utilisateurs = [{
+    surnom:'utilisateurUnSurmon',
     _id: utilisateurUnId,
     courriel:{
         maison:'vladsteak@gmail.com',
@@ -15,16 +16,21 @@ const Utilisateurs = [{
     password:'utilisateur_un_password',
     tokens:[{
         access:'auth',
-        token: jwt.sign({_id:utilisateurUnId, access: 'auth'},'monSecret').toString()
+        token: jwt.sign({_id:utilisateurUnId, access: 'auth'},process.env.JWT_SECRET).toString()
     }]
 
 },{
+    surnom:'utilisateurDeuxSurmon',
     _id:utilisateurDeuxId,
     courriel:{
         maison:'vladsteak@gmail.ca',
         travail:'stephanevadnais@gmail.ca'
     },
-    password:'utilisateur_deux_password'
+    password:'utilisateur_deux_password',
+    tokens:[{
+        access:'auth',
+        token: jwt.sign({_id:utilisateurDeuxId, access: 'auth'},process.env.JWT_SECRET).toString()
+    }]
 
 }
 
@@ -33,12 +39,16 @@ const Utilisateurs = [{
 
 const Taches = [{
     _id: new ObjectID(),
-    texte: 'premiere tache'
+    createur:utilisateurUnId,
+    texte: 'premiere tache',
+    complet:'false'
+
 }, {
     _id: new ObjectID(),
+    createur:utilisateurUnId,
     texte: 'deuxieme tache',
-    complet:'false',
-    dateComplete:123
+    complet:'false'
+
 }];
 
 const population_Taches = (suivant)=>{

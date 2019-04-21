@@ -9,11 +9,17 @@ var {mongoose} = require('./serveur/db/mongooseConfigurationConnection');
 var {Tache}= require('./serveur/modele/tache_planification');
 var {Utilisateur} = require('./serveur/modele/utilisateur');
 var {Date_Enregistrement} = require('./serveur/modele/utilisateur');
+var {Date_Completer} = require('./serveur/modele/utilisateur');
 var bodyparser = require('body-parser');
 var hbs = require('hbs');
 var fs = require('fs');
 var _ = require('lodash');
 var {authentification} = require('./serveur/middleware_utilitaireMillieu/authentification');
+
+
+var formatageDate = require('dateformat');
+var moment = new Date();
+var Date_Completer = formatageDate(moment, "completer");
 
 
 
@@ -78,9 +84,11 @@ app.get('/', (requete,reponse)=>{
 
     reponse.send("Bienvenue dans l'interface Express");
 }); // Page generer par defaut
+
 app.get('/projet',(requete,reponse)=>{
     reponse.render('projet.hbs',)
 }); // Autre page generer exemple
+
 app.get('/collaborateur',(requete,reponse)=>{
     reponse.send({
 
@@ -94,17 +102,23 @@ app.get('/collaborateur',(requete,reponse)=>{
 
     });
 }); //Autre page generer avec fonction hbs
+
 app.get('/direct',(requete,reponse)=>{
         reponse.render('direct.hbs',)
     }); //Autre page generer exemple
 
-app.get('/tache/:mongoID',(requete,reponse)=> {
+
+
+app.get('/tache/:mongoID',authentification,(requete,reponse)=> {
     var mongoID = requete.params.mongoID;
 
     if (!ObjectID.isValid(mongoID)) {
         return reponse.status(404).send();
     }
-    Tache.findById(mongoID).then((taches)=>{
+    Tache.findOne({
+        _id: mongoID,
+        createur: requete.utilisateurAuthentifier._id
+    }).then((taches)=>{
             if(!taches){
                 return reponse.status(404).send();
             }
@@ -116,8 +130,9 @@ app.get('/tache/:mongoID',(requete,reponse)=> {
         reponse.status(400).send();
     })
 }); // Obtenir les taches en envoyant un ID MongoDB
-app.get('/tache',(requete,reponse)=>{
-    Tache.find().then((taches)=>{
+
+app.get('/tache',authentification,(requete,reponse)=>{
+    Tache.find({createur:requete.utilisateurAuthentifier._id}).then((taches)=>{
         reponse.send({taches})
     }, (erreur)=>{
         reponse.status(400).send(erreur)
@@ -125,41 +140,41 @@ app.get('/tache',(requete,reponse)=>{
 
 }); //Obtenir toutes les taches
 
-app.delete('/tache/:mongoID',(requete,reponse)=> {
-    var mongoID = requete.params.mongoID;
 
-    if (!ObjectID.isValid(mongoID)) {
-        return reponse.status(404).send();
-    }
-    Tache.findByIdAndDelete(mongoID).then((taches)=>{
-            if(!taches){
-                return reponse.status(404).send();
-            }
-            reponse.send({tache});
-
-        }
-
-    ).catch((erreur)=>{
-        reponse.status(400).send();
-    })
-}); // Obtenir les taches en envoyant un ID MongoDB
-
-
-app.patch('/tache/:id',(requete,reponse)=>{
-    var id = requete.params.id;
+app.delete('/tache/:ID_Tache',authentification,(requete,reponse)=>{
+    var ID_Tache = requete.params.ID_Tache;
     var body = _.pick(requete.body,['texte','complet']);
 
-    if (!ObjectID.isValid(id)) {
+
+
+    if (!ObjectID.isValid(ID_Tache)) {
+        return reponse.status(404).send();
+    }
+
+    Tache.findOneAndDelete({_id: ID_Tache, createur:requete.utilisateurAuthentifier._id}).then((taches)=>{
+        reponse.send({taches})
+    }).catch((erreur)=>{
+        reponse.status(400).send();
+    })
+})
+
+app.patch('/tache/:ID_Tache',authentification,(requete,reponse)=>{
+    var ID_Tache = requete.params.ID_Tache;
+    var body = _.pick(requete.body,['texte','complet']);
+
+
+
+    if (!ObjectID.isValid(ID_Tache)) {
         return reponse.status(404).send();
     }
     if(_.isBoolean(body.complet) && body.complet){
-        body.dateComplete = new Date().getTime();
+        body.dateComplete = Date_Completer;
     }
     else{
         body.complet = false;
         body.dateComplete = null;
     }
-    Tache.findByIdAndUpdate(id, {$set: body}, {new: true}).then((taches)=>{
+    Tache.findOneAndUpdate({_id: ID_Tache, createur:requete.utilisateurAuthentifier._id}, {$set: body}, {new: true}).then((taches)=>{
         if(!taches){
             return reponse.status(404).send()
         }
@@ -169,12 +184,13 @@ app.patch('/tache/:id',(requete,reponse)=>{
     })
 })
 
-app.post('/tache',(requete,reponse)=>{
+app.post('/tache',authentification,(requete,reponse)=>{
 
     console.log(requete.body);
 
     var tache = new Tache({
-        texte: requete.body.texte
+        texte: requete.body.texte,
+        createur:requete.utilisateurAuthentifier._id
     });
 
     tache.save().then((document)=>{
@@ -185,7 +201,6 @@ app.post('/tache',(requete,reponse)=>{
         reponse.status(400).send(erreur);
     });
 }); // envoyer  de nouvelles taches
-
 
 app.post('/utilisateur',(requete,reponse)=>{
 
@@ -204,16 +219,11 @@ app.post('/utilisateur',(requete,reponse)=>{
 
 }); // Enregistrer de  nouvel utilisateur
 
-
-
-
-
 app.get('/utilisateur/moi',authentification,(requete,reponse)=>{
 
-reponse.send(requete.utilisateur);
+reponse.send(requete.utilisateurAuthentifier);
 
 });
-
 
 app.post('/utilisateur/entrer',(requete,reponse)=>{
     var body = _.pick(requete.body,['surnom','password']);
@@ -227,6 +237,13 @@ app.post('/utilisateur/entrer',(requete,reponse)=>{
 
     });
 });
+
+app.delete('/utilisateur/moi/token', authentification, (requete,reponse)=>{Utilisateur.removeToken_enleverJeton(requete.token).then(()=>{reponse.status(200).send();})
+
+
+}),()=>{
+    response.status(400).send();
+}
 
 app.listen(port,()=>{
     console.log(`Ecoute sur le port ${port}`)

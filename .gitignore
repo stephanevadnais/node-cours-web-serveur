@@ -1,3 +1,4 @@
 node_modules/
 utils/
 serveur.txt
+serveur/configuration/config.json

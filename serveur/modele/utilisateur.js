@@ -6,12 +6,13 @@ const bcrypt = require('bcryptjs');
 var formatageDate = require('dateformat');
 var moment = new Date();
 formatageDate.masks.perso = 'dd/mm/yyyy, h"h"MM TT "Enregistrement Accomplis!"';
+formatageDate.masks.completer = 'dd/mm/yyyy, h"h"MM TT "Tache Completer!"';
+var Date_Completer = formatageDate(moment, "completer");
 var Date_Enregistrement = formatageDate(moment, "perso");
 const jwt = require('jsonwebtoken');
 
 
-var TemplateUtilisateur = new mongoose.Schema(
-    {
+var TemplateUtilisateur = new mongoose.Schema({
 
 
         nom: {type: mongoose.SchemaTypes.String},
@@ -47,11 +48,7 @@ var TemplateUtilisateur = new mongoose.Schema(
 
 
 
-    }
-
-);
-
-
+    });
 
 TemplateUtilisateur.methods.toJSON = function(){
     var utilisateur = this;
@@ -62,12 +59,10 @@ TemplateUtilisateur.methods.toJSON = function(){
 
 };
 
-
-
 TemplateUtilisateur.methods.generateAuthToken_genererAuthJeton = function(){
     var utilisateur = this;
     var access = 'auth';
-    var token = jwt.sign({_id: utilisateur._id.toHexString(),access}, 'monSecret').toString();
+    var token = jwt.sign({_id: utilisateur._id.toHexString(),access}, process.env.JWT_SECRET).toString();
 
     utilisateur.tokens.push({access,token});
 
@@ -77,7 +72,6 @@ TemplateUtilisateur.methods.generateAuthToken_genererAuthJeton = function(){
 
 };
 
-
 TemplateUtilisateur.statics.findByToken_trouverLeJeton = function(token){
 
     var Utilisateur = this;
@@ -85,7 +79,7 @@ TemplateUtilisateur.statics.findByToken_trouverLeJeton = function(token){
 
     try{
 
-        decoder = jwt.decode(token, 'monSecret' );
+        decoder = jwt.decode(token, process.env.JWT_SECRET );
     }
 
     catch (erreur){
@@ -102,10 +96,6 @@ TemplateUtilisateur.statics.findByToken_trouverLeJeton = function(token){
 
 
 };
-
-
-
-
 
 TemplateUtilisateur.pre('save',function(suivant){
     var utilisateur = this;
@@ -151,18 +141,17 @@ TemplateUtilisateur.statics.findByCredentials_trouverParAccreditation = function
 
 };
 
+TemplateUtilisateur.statics.removeToken_enleverJeton = function(token){
+    var Utilisateur = this;
+    return Utilisateur.update({
+        $pull: {
+            tokens:{
+                token: token
+            }
+        }
+    });
 
-
-
-
-
-
-
-
-
-
-
-
+}
 
 var Utilisateur = mongoose.model('Nouveau_Utilisateur',TemplateUtilisateur);
 
